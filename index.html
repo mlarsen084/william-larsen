@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="William Larsen: registered electrician who designs and builds his own electronics.">
+<title>William Larsen</title>
+<style>
+/* Layout: one plain reading column, photos at full column width. Deliberately single light look, like a printed page. */
+:root{--bg:#fff;--ink:#111;--grey:#6d6d6d;--line:#e2e2e2;--sans:"Helvetica Neue",Helvetica,Arial,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;margin:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding-inline:20px;padding-block:56px 80px}
+h1{font-size:40px;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin:0 0 6px}
+.sub{color:var(--grey);margin:0 0 28px}
+p{margin:0 0 14px}
+hr{border:0;border-top:1px solid var(--line);margin:56px 0 40px}
+h2{font-size:26px;font-weight:700;letter-spacing:-.01em;margin:0 0 4px}
+.meta{color:var(--grey);margin:0 0 18px}
+h3{font-size:14px;font-weight:700;margin:40px 0 10px}
+figure{margin:22px 0}
+figure img{display:block;width:100%;height:auto}
+figcaption{color:var(--grey);font-size:14px;margin-top:8px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pair img{aspect-ratio:4/5;object-fit:cover}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin-bottom:4px}
+.contact p{margin:0}
+@media (max-width:560px){h1{font-size:32px}.pair{grid-template-columns:1fr}.pair img{aspect-ratio:auto}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <h1>William Larsen</h1>
+  <p class="sub">Registered electrician, Invercargill</p>
+  <p>I've been an electrician for six years. Outside work I design and build my own electronics. My bedroom is basically a workshop, and there's usually something half-built on the bench.</p>
+  <p>Below are the three projects I've put the most time into, plus some of my day-to-day work.</p>
+
+  <hr>
+
+  <h2>LoRa Pen Tester</h2>
+  <p class="meta">On revision 4, still going</p>
+  <p>When you're isolating a circuit, you usually need someone at the plug yelling "it's still on" while you flick breakers at the board. This is a volt pen that sends a signal to a receiver, so you can do it on your own.</p>
+  <p>I designed the schematic and the board myself, and it's long and thin so it fits in a pen body. I've soldered every version by hand. The photo is the current prototype while I was testing a fix, which is why there are wires tacked on.</p>
+  <figure><img src="layout.jpg" alt="PCB layout of the pen tester"><figcaption>Board layout in EasyEDA Pro</figcaption></figure>
+  <figure><img src="pen.jpg" alt="Pen tester prototype board close up" style="aspect-ratio:4/3;object-fit:cover;object-position:center 60%"><figcaption>Prototype board mid-debug</figcaption></figure>
+
+  <hr>
+
+  <h2>Car HUD</h2>
+  <p class="meta">Version 3, built and working</p>
+  <p>A gauge display for a car. You can wire in whatever sensors you want, like temperature, tacho or fuel, and it shows them on two digital displays.</p>
+  <p>It runs on an ATmega and has a GPS module with its own antenna amp and SMA connector. There's also a thermocouple input, screw terminals for the sensors, and USB-C power. This is the third board I've had made for it. Getting the GPS and displays working together took most of the debugging.</p>
+  <figure><img src="hud.jpg" alt="HUD V3 board powered on"><figcaption>V3 powered up on the bench</figcaption></figure>
+  <figure><img src="hudsch.jpg" alt="HUD schematic"><figcaption>Schematic</figcaption></figure>
+
+  <hr>
+
+  <h2>Autobeam</h2>
+  <p class="meta">Schematic done, not built yet</p>
+  <p>New cars dip their high beams automatically, and older ones don't. This uses a camera and a small neural network, which I trained in Edge Impulse, to spot oncoming headlights and switch a relay to dip the lights.</p>
+  <p>It's based on an ESP32-S3, with a 12 V buck converter so it can run off the car. I've parked it until the pen tester is finished.</p>
+  <figure><img src="beamsch.jpg" alt="Autobeam schematic"><figcaption>Schematic</figcaption></figure>
+
+  <hr>
+
+  <h2>Work</h2>
+  <p class="meta">Aotea Electric, Invercargill</p>
+  <p>I did a four-year ETCO apprenticeship and I'm now registered. At the moment I'm on the domestic and HVAC side, installing heat pumps around Southland. I price my own jobs, book them in and do the work. Over the years I've done rewires, switchboards, underground mains, and commercial and industrial jobs too.</p>
+  <p>I also spend a lot of time with the younger apprentices. I show them how to do something, then let them have a go.</p>
+  <figure><img src="site.jpg" alt="Commercial site job" style="aspect-ratio:4/3;object-fit:cover"><figcaption>Commercial job</figcaption></figure>
+
+  <hr>
+
+  <div class="contact">
+    <h3 style="margin-top:0">Get in touch</h3>
+    <p>willimobro@gmail.com</p>
+    <p style="color:var(--grey);margin-top:14px">Happy to move to Auckland. Design files for any of these projects are available if you want them.</p>
+  </div>
+</div>
+
+</body>
+</html>
